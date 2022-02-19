@@ -23,16 +23,17 @@
             height: calc(100% - 291px);
         }
         @include media-md {
-            width: calc(332px + 50vw); //720px + (100vw - 720px ширина контейнера lg)/2 - 30px внутренний отступ контейнера +2px отступ полоски
+            width: 50vw;
+            // width: calc(332px + 50vw); //720px + (100vw - 720px ширина контейнера lg)/2 - 30px внутренний отступ контейнера +2px отступ полоски
 
         }
-        @include media-lg {
-            width: calc(452px + 50vw); //960px + (100vw - 960px ширина контейнера lg)/2 - 30px внутренний отступ контейнера +2px отступ полоски
-            // height: calc(100% - 303px);
-        }
-        @include media-xl {
-            width: calc(588px + 50vw); //1232px + (100vw - 1232px ширина контейнера lg)/2 - 30px внутренний отступ контейнера +2px отступ полоски
-        }
+        // @include media-lg {
+        //     width: calc(452px + 50vw); //960px + (100vw - 960px ширина контейнера lg)/2 - 30px внутренний отступ контейнера +2px отступ полоски
+        //     // height: calc(100% - 303px);
+        // }
+        // @include media-xl {
+        //     width: calc(588px + 50vw); //1232px + (100vw - 1232px ширина контейнера lg)/2 - 30px внутренний отступ контейнера +2px отступ полоски
+        // }
     }
     &__title {
         position: relative;
@@ -69,9 +70,24 @@
         margin-bottom: -27px;
         @include media-md {
             display: flex;
+
         }
         @include media-lg {
             margin-bottom: -39px;
+        }
+        &:before {
+            @include media-md {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: calc(100% - 27px);
+                background: #1F65D9;
+            }
+            @include media-lg {
+                height: calc(100% - 39px);
+            }
         }
     }
     &__block {

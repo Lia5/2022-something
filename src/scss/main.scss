@@ -103,9 +103,15 @@ ul,li {
 		}
 		&::before {
 			left: -2px;
+            @include media-md {
+				left: 0;
+			}
 		}
 		&:after {
 			right: -2px;
+            @include media-md {
+				right: 0;
+			}
 		}
 	}
 	&--center {
