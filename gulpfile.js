@@ -43,34 +43,7 @@ gulp.task('styles', function() {
 
 gulp.task('js', function() {
 	return gulp.src([
-		])
-	.pipe(concat('scripts.min.js'))
-	.pipe(uglify()) // Mifify js (opt.)
-	.pipe(gulp.dest('assets/js'))
-	.pipe(browserSync.reload({ stream: true }))
-});
-
-gulp.task('js', function() {
-	return gulp.src([
-		'src/libs/1.jquery/dist/jquery.min.js',
-		// 'myapp/libs/intl-tel-input/js/utils.js',
-		// 'myapp/libs/intl-tel-input/js/intlTelInput.js',
-		'src/libs/3.mask/jquery.maskedinput.min.js',
-		// 'src/libs/preload/preload.js',
-		// 'myapp/libs/2.slick/slick.js',
-		// 'myapp/libs/owlcarousel/dist/owlcarousel.js',
-		// 'myapp/js/common.js', // Always at the end
-		// 'src/libs/slick-1.8.1/slick.js',
-		
-		//'src/libs/jscrollpane/jquery.mousewheel.js',
-		//'src/libs/jscrollpane/mwheelIntent.js',
-		//'src/libs/jscrollpane/jquery.jscrollpane.js',
-		// 'src/libs/3.mask/jquery.mask.min.js',
-		// 'src/libs/fancybox/jquery.fancybox.js',
-		// 'src/libs/responsive-tabs.js',
-		// 'src/libs/jquery.marquee.min.js' //бегущая строка
-		// 'src/libs/owlcarousel/dist/owlcarousel.js',
-		// 'src/libs/mylazyjs.js', // Always at the end
+		'src/libs/1.jquery/dist/jquery.min.js'
 		])
 	.pipe(concat('scripts.min.js'))
 	// .pipe(uglify()) // Mifify js (opt.)
