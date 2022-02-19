@@ -1,0 +1,31 @@
+@mixin media-sm {
+    @media (min-width: #{375px}) { 
+        @content;
+    }
+}
+@mixin media-md {
+    @media (min-width: #{768px}) {
+        @content;
+    }
+}
+@mixin media-lg {
+    @media (min-width: #{992px}) {
+        @content;
+    }
+}
+@mixin media-xl {
+    @media (min-width: #{1280px}) {
+        @content;
+    }
+}
+@mixin media-xxl {
+    @media (min-width: #{1400px}) {
+        @content;
+    }
+}
+:root {
+    --bs-gutter-x: 8px;
+    @include media-lg {
+        --bs-gutter-x: 20px;
+    }
+}

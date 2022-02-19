@@ -1,0 +1,7 @@
+@import "_mixins/font-face";
+
+@include font-face("ProximaNova", "../fonts/ProximaNova-Light/ProximaNova-Light", 300);
+@include font-face("ProximaNova", "../fonts/ProximaNova-Regular/ProximaNova-Regular", 400);
+@include font-face("ProximaNova", "../fonts/ProximaNova-Bold/ProximaNova-Bold", 700);
+@include font-face("ProximaNova", "../fonts/ProximaNova-Extrabld/ProximaNova-Extrabld", 800);
+@include font-face("ProximaNova", "../fonts/ProximaNova-Black/ProximaNova-Black", 900);

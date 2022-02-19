@@ -1,0 +1,150 @@
+.lightpaper {
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+    padding: 42px 0 27px;
+    margin: -44px 0 -27px;
+    z-index: 2;
+    @include media-md {
+        padding: 73px 0 218px;
+        margin: -73px 0 -218px;
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        top: 41px;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 68px);
+        background: #1F65D9;
+        z-index: -1;
+        @include media-md {
+            top: 73px;
+            height: calc(100% - 291px);
+        }
+        @include media-md {
+            width: calc(332px + 50vw); //720px + (100vw - 720px ширина контейнера lg)/2 - 30px внутренний отступ контейнера +2px отступ полоски
+
+        }
+        @include media-lg {
+            width: calc(452px + 50vw); //960px + (100vw - 960px ширина контейнера lg)/2 - 30px внутренний отступ контейнера +2px отступ полоски
+            // height: calc(100% - 303px);
+        }
+        @include media-xl {
+            width: calc(588px + 50vw); //1232px + (100vw - 1232px ширина контейнера lg)/2 - 30px внутренний отступ контейнера +2px отступ полоски
+        }
+    }
+    &__title {
+        position: relative;
+        color: #fff;
+        z-index: 1;
+        margin: 195px 0 48px;
+        @include media-md {
+            margin: 0;
+        }
+        @include media-md {
+            width: 238px;
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: -31px;
+            z-index: -1;
+            width: 197px; 
+            height: 229px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='197' height='229' viewBox='0 0 197 229' fill='none'%3e%3cg opacity='0.1'%3e%3cpath d='M139.667 0H29.8917V100.703H44.6658V14.7705H124.892V71.1618H181.355V214.287H124.892V229H196.071V56.4485V56.3913V56.4485L139.667 0ZM139.609 56.3913V20.839L175.227 56.3913H139.609ZM0 114.5V229H110.118V114.5H0ZM95.3443 210.222L68.0295 182.914L49.0179 201.921L37.5078 190.413L14.6595 213.256V129.27H95.2871V210.222H95.3443ZM81.83 161.96C81.83 166.311 78.2797 169.861 73.9276 169.861C69.5756 169.861 66.0252 166.311 66.0252 161.96C66.0252 157.609 69.5756 154.06 73.9276 154.06C78.2797 154.117 81.83 157.609 81.83 161.96Z' fill='white'/%3e%3c/g%3e%3c/svg%3e");
+            @include media-md {
+                width: 238px;
+                height: 278px;
+                left: 0;
+            }
+        }
+    }
+    &__body {
+        position: relative;
+        margin-bottom: -27px;
+        @include media-md {
+            display: flex;
+        }
+        @include media-lg {
+            margin-bottom: -39px;
+        }
+    }
+    &__block {
+        display: flex;
+        flex-direction: column;
+        @include media-md {
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 50%;
+            margin-top: 71px;
+        }
+    }
+    &__text {
+        max-width: 190px;
+        margin-bottom: 38px;
+        letter-spacing: 0.32px;
+        @include media-md {
+            max-width: 217px;
+            margin-top: 44px;
+            margin-bottom: 0;
+        }
+        @include media-lg {
+            margin-left: 25px;
+            font-size: 24px;
+            line-height: 34px;
+            letter-spacing: 0.48px;
+        }
+        @include media-xl {
+            margin-left: 55px;
+        }
+    }
+    &__btn {
+        display: flex;
+        justify-content: center;
+        @include media-md {
+            width: 100%;
+            margin-top: 56px;
+        }
+    }
+    &__broshure {
+        position: absolute;
+        top: -41px;
+        right: -192px;
+        @include media-md {
+            position: relative;
+            top: auto;
+            right: auto;
+            width: 50%;
+        }
+    }
+    &__img {
+        width: 464px;
+        height: 412px;
+        @include media-md {
+            position: absolute;
+            top: -46px;
+            right: -53px;
+        }
+        @include media-lg {
+            width: 564px;
+            height: 512px;
+        }
+        @include media-xl {
+            top: -73px;
+            right: -8px;
+            width: 677px;
+            height: 601px;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+    }
+}
