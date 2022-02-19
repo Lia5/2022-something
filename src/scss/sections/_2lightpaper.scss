@@ -87,6 +87,7 @@
     &__text {
         max-width: 190px;
         margin-bottom: 38px;
+        font-weight: 400;
         letter-spacing: 0.32px;
         @include media-md {
             max-width: 217px;
