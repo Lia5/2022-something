@@ -1,5 +1,6 @@
 .product {
     &__body {
+        background: #EAEFF5;
     	padding: 90px 0 400px;
         @include media-xl {
     	    padding: 167px 0 500px;
